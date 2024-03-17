@@ -40,7 +40,8 @@ export default function App() {
         onPress={() => router.navigate({pathname: "/profile/[id]", params: { id: "" }})
       }
       className='bg-white rounded-full p-2 mt-5'
-      >Click Me!
+      >
+        <Text>Open Jetflix</Text>
       </TouchableOpacity>
     </View>
   );
