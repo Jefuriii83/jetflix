@@ -1,5 +1,5 @@
-import { useLocalSearchParams } from "expo-router";
-import { View, Text, TouchableOpacity } from "react-native";
+import { useLocalSearchParams, router } from "expo-router";
+import { View, Text, TouchableOpacity} from "react-native";
 import { NativeWindStyleSheet } from "nativewind";
 
 
@@ -15,10 +15,12 @@ const profile = () => {
             {/* AvatarCard */}
 
             <TouchableOpacity
-                className='self-center'
-                >
-                    <Text className="text-gray-400 min-[320px]:text-sm">Manage Profile</Text>
-            </TouchableOpacity>
+        onPress={() => router.navigate({pathname: "/profile/dashboard/[id]", params: { id: "" }})
+      }
+      className='bg-white rounded-full p-2 mt-5'
+      >
+        <Text>Open Jetflix</Text>
+      </TouchableOpacity>
 
         </View>
     )
